@@ -16,29 +16,128 @@
 <div class="container">
 
     <div class="card">
-        <h2>Câu 1</h2>
-        <p>Giải thích sự khác biệt giữa position: absolute và position: relative trong CSS...</p>
+        <h2>Câu 1 (10 điểm)</h2>
+
+        <h3>Sự khác biệt</h3>
+        <p><b>position: relative</b> giữ phần tử trong luồng bố cục bình thường của trang. Khi sử dụng top, left, right hoặc bottom, phần tử sẽ di chuyển khỏi vị trí ban đầu nhưng vẫn giữ khoảng trống cũ.</p>
+
+        <p><b>position: absolute</b> tách phần tử khỏi luồng bố cục và định vị dựa trên phần tử cha gần nhất có thuộc tính position khác static.</p>
+
+        <h3>Tình huống sử dụng</h3>
+        <ul>
+            <li>relative: dùng cho container hoặc điều chỉnh vị trí của phần tử.</li>
+            <li>absolute: dùng cho menu thả xuống, popup, nút nổi hoặc thông báo.</li>
+        </ul>
+
+        <h3>Ảnh hưởng đến Responsive và Deploy</h3>
+        <p>relative thường tương thích tốt với nhiều kích thước màn hình. absolute nếu dùng giá trị cố định có thể làm giao diện bị lệch trên điện thoại hoặc máy tính bảng. Vì vậy cần thiết kế responsive trước khi deploy lên hosting.</p>
     </div>
 
     <div class="card">
-        <h2>Câu 2</h2>
-        <p>Mô tả quy trình đăng ký domain và cấu hình hosting cho một website JavaScript...</p>
+        <h2>Câu 2 (10 điểm)</h2>
+
+        <h3>Quy trình đăng ký Domain và Hosting</h3>
+        <ol>
+            <li>Đăng ký tên miền.</li>
+            <li>Thuê hosting hoặc dịch vụ deploy.</li>
+            <li>Upload mã nguồn website.</li>
+            <li>Cấu hình DNS.</li>
+            <li>Kiểm tra và đưa website vào hoạt động.</li>
+        </ol>
+
+        <h3>Vai trò của DNS</h3>
+        <p>DNS chuyển đổi tên miền thành địa chỉ IP của máy chủ để người dùng có thể truy cập website.</p>
+
+        <h3>Công cụ hỗ trợ</h3>
+        <ul>
+            <li>GitHub Pages.</li>
+            <li>Netlify.</li>
+            <li>Vercel.</li>
+        </ul>
+
+        <h3>Rủi ro bảo mật</h3>
+        <ul>
+            <li>Cấu hình DNS sai làm website không truy cập được.</li>
+            <li>Không dùng HTTPS có thể làm lộ dữ liệu.</li>
+            <li>Phân quyền sai có thể làm lộ mã nguồn.</li>
+        </ul>
     </div>
 
     <div class="card">
-        <h2>Câu 3</h2>
-        <p>So sánh let, const và var về scope và hoisting...</p>
+        <h2>Câu 3 (10 điểm)</h2>
+
+        <h3>So sánh let, const và var</h3>
+
+        <table border="1" width="100%">
+            <tr>
+                <th>Đặc điểm</th>
+                <th>var</th>
+                <th>let</th>
+                <th>const</th>
+            </tr>
+            <tr>
+                <td>Phạm vi</td>
+                <td>Function Scope</td>
+                <td>Block Scope</td>
+                <td>Block Scope</td>
+            </tr>
+            <tr>
+                <td>Khai báo lại</td>
+                <td>Có</td>
+                <td>Không</td>
+                <td>Không</td>
+            </tr>
+            <tr>
+                <td>Gán lại giá trị</td>
+                <td>Có</td>
+                <td>Có</td>
+                <td>Không</td>
+            </tr>
+        </table>
+
+        <h3>Lỗi thường gặp</h3>
+
+        <pre>
+console.log(a);
+let a = 10;
+        </pre>
+
+        <p>Kết quả: ReferenceError: Cannot access 'a' before initialization.</p>
+
+        <h3>Debug</h3>
+        <p>Nhấn F12 để mở Chrome DevTools, sử dụng tab Console để xem lỗi và tab Sources để đặt Breakpoint theo dõi giá trị biến.</p>
     </div>
 
     <div class="card">
-        <h2>Câu 4</h2>
-        <p>Giải thích khái niệm Event Delegation trong JavaScript...</p>
+        <h2>Câu 4 (10 điểm)</h2>
+
+        <h3>Khái niệm</h3>
+        <p>Event Delegation là kỹ thuật gắn sự kiện lên phần tử cha để xử lý sự kiện của các phần tử con thông qua cơ chế Event Bubbling.</p>
+
+        <h3>Ví dụ</h3>
+
+        <pre>
+document.getElementById("list")
+.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        alert(e.target.innerText);
+    }
+});
+        </pre>
+
+        <h3>Lợi ích</h3>
+        <ul>
+            <li>Giảm số lượng Event Listener.</li>
+            <li>Tiết kiệm bộ nhớ.</li>
+            <li>Tăng hiệu suất website.</li>
+            <li>Hoạt động tốt với danh sách động.</li>
+        </ul>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2026 - Nguyễn Tấn Phát</p>
+    <p>© 2026 - Nguyễn Tấn Phát - 221A010071</p>
 </footer>
 
 </body>
